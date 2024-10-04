@@ -16,10 +16,16 @@
 # tupla
 atributos = ("Nome", "Idade", "CPF", "E-mail", "Profissão", "Tipo Sanguíneo", "Peso", "Altura")
 
-# cadastrar um novo usuário
-usuario = {}
-for atributo in atributos:
-    usuario[atributo] = input(f"Inform o valor do campo {atributo}: ")
+continuar = input(f"Para continuar digite 'Sim', para parar digite 'Não': ")
+
+while continuar == "Sim":
+    # cadastrar um novo usuário
+    usuario = {}
+    for atributo in atributos:
+        usuario[atributo] = input(f"Informe o valor do campo {atributo}: ")
+
+    # Perguntar novamente se o usuário quer continuar
+    continuar = input(f"Para continuar digite 'Sim', para parar digite 'Não': ")
 
 # exibir os dados
 print("")
